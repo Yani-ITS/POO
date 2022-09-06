@@ -1,3 +1,6 @@
+from datetime import date
+
+
 class Persona:
     def __init__(self,nombre , apellido, dni, telefono, email, f_nac, direccion):
         self.nombre= nombre
@@ -24,8 +27,33 @@ class Persona:
         def telefono(self):
             return self.telefono
         
+        @property
+        def email(self):
+            return self.email
+        
+        @property
+        def f_nac(self):
+            return self.f_nac
+        
+        @property
+        def direccion(self):
+            return self.direccion
+        
+        @direccion.setter
+        def direccion (self, unaDireccion):
+            self.direccion= unaDireccion
+            
+        @f_nac.setter
+        def f_nac(self, unaFecha):
+            self.f_nac= unaFecha
+            
+        @email.setter
+        def email(self, unEmail):
+            self.email= unEmail
+            
         @telefono.setter
-        def 
+        def telefono(self, unTelefono):
+            self.telefono= unTelefono
         
         @dni.setter
         def dni(self, unDni):
@@ -38,5 +66,10 @@ class Persona:
         @nombre.setter
         def nombre(self, unNombre):
             self.nombre= unNombre
+            
+        def edad():
+            edad= date - self.f_nac
+            return edad
+        
             
         
